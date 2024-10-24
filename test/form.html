@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire Étudiant</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <div class="container">
+        <div class="students-list">
+            <h2>Liste des étudiants</h2>
+            <ul id="studentList">
+                <!-- La liste sera remplie ici après inscription -->
+            </ul>
+        </div>
+        <div class="student-details">
+            <h2>Inscription Étudiant</h2>
+            <form id="studentForm">
+                <label for="name">Nom - Prénom :</label>
+                <input type="text" id="name" name="name" required><br>
+                <label for="age">Âge :</label>
+                <select id="age" name="age" required>
+                    <!-- Les options d'âge seront générées par JavaScript -->
+                </select><br>
+                <label for="matricule">Matricule :</label>
+                <input type="text" id="matricule" name="matricule" required><br>
+                <label for="gender">Sexe :</label><br>
+                <input type="radio" id="homme" name="gender" value="Homme" required>
+                <label for="homme">Homme</label>
+                <input type="radio" id="femme" name="gender" value="Femme" required>
+                <label for="femme">Femme</label><br>
+                <label for="email">E-mail :</label>
+                <input type="email" id="email" name="email" required><br>
+                <label for="dob">Date de naissance :</label>
+                <input type="date" id="dob" name="dob" required><br>
+                <button type="submit">S'inscrire</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Fenêtre modale pour afficher les détails de l'étudiant -->
+    <div id="studentModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Détails de l'étudiant</h2>
+            <p id="modalName"></p>
+            <p id="modalAge"></p>
+            <p id="modalMatricule"></p>
+            <p id="modalGender"></p>
+            <p id="modalEmail"></p>
+            <p id="modalDob"></p>
+            <button id="modifyBtn">Modifier</button>
+            <button id="deleteBtn">Supprimer</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
