@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const modalMatricule = document.getElementById('modalMatricule');
     const modalGender = document.getElementById('modalGender');
     const modalEmail = document.getElementById('modalEmail');
-    const modalDob = document.getElementById('modalDob');
     const modifyBtn = document.getElementById('modifyBtn');
     const deleteBtn = document.getElementById('deleteBtn');
     let currentStudent = null;
@@ -34,7 +33,6 @@ document.addEventListener('DOMContentLoaded', function () {
         const matricule = document.getElementById('matricule').value;
         const gender = document.querySelector('input[name="gender"]:checked').value;
         const email = document.getElementById('email').value;
-        const dob = document.getElementById('dob').value;
 
         // Si nous sommes en mode modification
         if (currentStudent && currentLi) {
@@ -62,7 +60,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 matricule: matricule,
                 gender: gender,
                 email: email,
-                dob: dob
             };
 
             students.push(student);
@@ -95,8 +92,6 @@ document.addEventListener('DOMContentLoaded', function () {
         modalMatricule.textContent = `Matricule: ${student.matricule}`;
         modalGender.textContent = `Sexe: ${student.gender}`;
         modalEmail.textContent = `Email: ${student.email}`;
-        modalDob.textContent = `Date de naissance: ${student.dob}`;
-
         modal.style.display = 'block';
     }
 
@@ -134,7 +129,6 @@ document.addEventListener('DOMContentLoaded', function () {
             document.getElementById('matricule').value = currentStudent.matricule;
             document.querySelector(`input[name="gender"][value="${currentStudent.gender}"]`).checked = true;
             document.getElementById('email').value = currentStudent.email;
-            document.getElementById('dob').value = currentStudent.dob;
 
             modal.style.display = 'none';
         }

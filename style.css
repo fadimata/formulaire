@@ -31,7 +31,7 @@ body {
 }
 
 .students-list {
-    border-right: 1px solid #ddd;
+    border-left: 1px solid #ddd;
 }
 
 .students-list ul {
@@ -66,6 +66,7 @@ button {
     color: white;
     border: none;
     cursor: pointer;
+    border-radius: 5px;
 }
 
 button:hover {
@@ -110,4 +111,7 @@ button:hover {
 #modifyBtn, #deleteBtn {
     width: 45%;
     margin: 10px 5px;
+}
+.divSexe {
+    display: flex;
 }

@@ -8,14 +8,8 @@
 </head>
 <body>
     <div class="container">
-        <div class="students-list">
-            <h2>Liste des étudiants</h2>
-            <ul id="studentList">
-                 <!-- La liste sera remplie ici après inscription -->
-            </ul>
-        </div>
         <div class="student-details">
-            <h2>Inscription Étudiant</h2>
+            <h2>Inscription Étudiant</h2> <br>
             <form id="studentForm">
                 <label for="name">Nom - Prénom :</label>
                 <input type="text" id="name" name="name" required><br>
@@ -25,17 +19,24 @@
                 </select><br>
                 <label for="matricule">Matricule :</label>
                 <input type="text" id="matricule" name="matricule" required><br>
-                <label for="gender">Sexe :</label><br>
+                <label for="gender">Sexe :</label><br><br>
+                <div class="divSexe">
                 <input type="radio" id="homme" name="gender" value="Homme" required>
                 <label for="homme">Homme</label>
                 <input type="radio" id="femme" name="gender" value="Femme" required>
-                <label for="femme">Femme</label><br>
+                <label for="femme">Femme</label>
+                </div>
+                <br>
                 <label for="email">E-mail :</label>
-                <input type="email" id="email" name="email" required><br>
-                <label for="dob">Date de naissance :</label>
-                <input type="date" id="dob" name="dob" required><br>
+                <input type="email" id="email" name="email" required><br><br>
                 <button type="submit">S'inscrire</button>
             </form>
+        </div>
+        <div class="students-list">
+            <h2>Liste des étudiants</h2>
+            <ul id="studentList">
+                 <!-- La liste sera remplie ici après inscription -->
+            </ul>
         </div>
     </div>
 
